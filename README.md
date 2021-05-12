@@ -3,7 +3,7 @@
 Covid19 info app using flutter
 
 # Design UI
-![alt text](https://github.com/baydim/cashier/blob/master/assets/Group%2014%20(5).png)
+![alt text](https://github.com/baydim/covid19/blob/master/assets/Group%2014.png)
 
 ## Getting Started
 
