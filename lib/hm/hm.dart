@@ -1,5 +1,6 @@
 import 'package:covid19/controller/fetchcoviddata.dart';
 import 'package:covid19/hm/botsethm.dart';
+import 'package:covid19/search/search.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mapbox_gl/mapbox_gl.dart';
@@ -164,17 +165,25 @@ class _HmState extends State<Hm> {
                                 ],
                               ),
                             ),
-                        Container(
-                          padding: EdgeInsets.all(5),
-                          margin: EdgeInsets.only(right: 15),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Icon(
-                            Icons.keyboard_arrow_right_rounded,
-                            color: Colors.black,
-                            size: 28,
+                        InkWell(
+                          onTap: () {
+                            Get.bottomSheet(
+                              Search(),
+                              isScrollControlled: true,
+                            );
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(5),
+                            margin: EdgeInsets.only(right: 15),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                            ),
+                            child: Icon(
+                              Icons.keyboard_arrow_right_rounded,
+                              color: Colors.black,
+                              size: 28,
+                            ),
                           ),
                         )
                       ],
